@@ -10,7 +10,7 @@ Se aplicará un módulo de **mocking** y un manejador de errores a tu servidor a
 
 Enlace al repositorio de **GitHub** con el proyecto completo, sin la carpeta de **node_modules**.
 
-- Generar un módulo de **mocking** para el servidor, con el fin de que, al inicializarse pueda generar y entregar 100 productos con el mismo formato que entregaría una petición de **MongoDB**. Esto solo debe ocurrir en un **endpoint** determinado (**/mockingproducts**).
+- [x] Generar un módulo de **mocking** para el servidor, con el fin de que, al inicializarse pueda generar y entregar 100 productos con el mismo formato que entregaría una petición de **MongoDB**. Esto solo debe ocurrir en un **endpoint** determinado (**/mockingproducts**).
 - Generar un **customizador** de errores y crear un diccionario para tus errores más comunes al crear un producto, agregarlo al carrito, etc.
 
 ## dependencies
@@ -90,6 +90,10 @@ Enlace al repositorio de **GitHub** con el proyecto completo, sin la carpeta de 
 - `npm i twilio`
 
 > - **Twilio** es una plataforma de comunicaciones en la nube que permite a los desarrolladores integrar capacidades de comunicación, como llamadas de voz, mensajes de texto (**SMS**), video y autenticación, en sus aplicaciones. **Twilio** proporciona **API** y servicios que facilitan la implementación de estas funcionalidades sin la necesidad de gestionar infraestructura de telecomunicaciones compleja.
+
+- `npm i @faker-js/faker`
+
+> - **@faker-js/faker** es una biblioteca de **JavaScript** diseñada para generar datos falsos o simulados (**mock data**).
 
 ## devDependencies
 

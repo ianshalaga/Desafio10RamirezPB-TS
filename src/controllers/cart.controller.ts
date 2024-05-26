@@ -3,7 +3,7 @@ import {
   cartService,
   mailService,
   productService,
-  smsService,
+  // smsService,
   ticketService,
   userService,
 } from "../services/services";
