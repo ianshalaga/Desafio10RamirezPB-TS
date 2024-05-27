@@ -4,7 +4,7 @@ import DbProduct from "../interfaces/DbProduct";
 class Mocking {
   constructor() {}
 
-  async mockingProduct() {
+  async mockingProduct(): Promise<DbProduct> {
     const dbProduct: DbProduct = {
       _id: faker.database.mongodbObjectId(),
       title: faker.commerce.productName(),

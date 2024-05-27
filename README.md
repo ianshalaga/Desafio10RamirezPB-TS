@@ -11,7 +11,7 @@ Se aplicará un módulo de **mocking** y un manejador de errores a tu servidor a
 Enlace al repositorio de **GitHub** con el proyecto completo, sin la carpeta de **node_modules**.
 
 - [x] Generar un módulo de **mocking** para el servidor, con el fin de que, al inicializarse pueda generar y entregar 100 productos con el mismo formato que entregaría una petición de **MongoDB**. Esto solo debe ocurrir en un **endpoint** determinado (**/mockingproducts**).
-- Generar un **customizador** de errores y crear un diccionario para tus errores más comunes al crear un producto, agregarlo al carrito, etc.
+- [x] Generar un **customizador** de errores y crear un diccionario para tus errores más comunes al crear un producto.
 
 ## dependencies
 

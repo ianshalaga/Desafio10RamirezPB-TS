@@ -1,5 +1,7 @@
 import ProductCart from "../interfaces/ProductCart";
 import { z } from "zod";
+import ErrorHandler from "../utils/ErrorHandler";
+import errorTypes from "../utils/errorTypes";
 
 const productCartSchema = z
   .object({
@@ -16,7 +18,13 @@ function validateProductCart(data: any): ProductCart[] {
     if (validationResult.success) {
       validatedProducts.push(item);
     } else {
-      throw new Error("Objeto de actualización inválido.");
+      throw ErrorHandler.customError(
+        "Data validation error",
+        "Invalid Product Cart",
+        errorTypes.ERROR_DATA,
+        `ProductCart instance was spected. Recieved: ${item}`
+      );
+      // throw new Error("Objeto de actualización inválido.");
     }
   }
   return validatedProducts;

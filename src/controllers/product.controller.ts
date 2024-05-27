@@ -9,6 +9,7 @@ import UpdateProduct from "../interfaces/UpdateProduct";
 // Validators
 import validateQueryParams from "../validators/queryParams";
 import validateUpdateProduct from "../validators/updateProduct";
+import validateProduct from "../validators/product";
 
 class ProductController {
   constructor() {}
@@ -51,13 +52,13 @@ class ProductController {
 
   // @@@@
   async createProduct(req: Request, res: Response) {
-    try {
-      const product: Product = req.body;
-      await productService.createProduct(product);
-      res.status(200).json(successStatus);
-    } catch (error) {
-      res.status(500).json(failureStatus(error.message));
-    }
+    // try {
+    const product: Product = validateProduct(req.body);
+    await productService.createProduct(product);
+    res.status(200).json(successStatus);
+    // } catch (error) {
+    //   res.json(failureStatus(error.message));
+    // }
   }
 
   // @@@@
