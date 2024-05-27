@@ -23,7 +23,7 @@ function validateProduct(data: any): Product {
     throw ErrorHandler.customError(
       "Product validation error",
       "Invalid product data",
-      errorTypes.ERROR_INVALID_ARGUMENTS,
+      errorTypes.ERROR_DATA,
       productInfoError(data)
     );
   }
