@@ -19,6 +19,7 @@ class SessionController {
 
   // @@@@
   async login(req: Request, res: Response) {
+    console.log(req.user);
     if (!req.user)
       return res.status(400).json(failureStatus("Error de credenciales."));
     req.session.user = new CurrentUserDTO(req.user).currentUser;
